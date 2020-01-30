@@ -18,46 +18,26 @@ function Setup({ values, errors, touched, status })
             <label htmlFor="name">
                 Name
                 <br />
-                <Field
-                    id="name"
-                    type="text"
-                    name="name"
-                    placeholder="name"
-                />
+                <Field id="name" type="text" name="name" placeholder="name" />
                 {touched.name && errors.name && (<p>{errors.name}</p>)}
             </label>
             <br />
             <label htmlFor="email">
                 E-Mail
                 <br />
-                <Field
-                    id="email"
-                    type="text"
-                    name="email"
-                    placeholder="email"
-                />
+                <Field id="email" type="text" name="email" placeholder="email" />
                 {touched.email && errors.email && (<p>{errors.email}</p>)}
             </label>
             <br />
             <label htmlFor="password">
                 Password
                 <br />
-                <Field
-                    id="password"
-                    type="text"
-                    name="password"
-                    placeholder="password"
-                />
+                <Field id="password" type="text" name="password" placeholder="password" />
                 {touched.password && errors.password && (<p>{errors.password}</p>)}
             </label>
             <br />
             <label htmlFor="tos">
-                <Field
-                    id="tos"
-                    type="checkbox"
-                    name="tos"
-                    placeholder="tos"
-                />
+                <Field id="tos" type="checkbox" name="tos" placeholder="tos" />
                 Agree to TOS
                 {touched.tos && errors.tos && (<p>{errors.tos}</p>)}
             </label>
@@ -65,14 +45,14 @@ function Setup({ values, errors, touched, status })
             <button type="submit">Submit!</button>
         </Form>
         {peoples.map(people => {
-        return (
-          <ul key={people.name}>
-            <li>Name: {people.name}</li>
-            <li>Email: {people.email}</li>
-            <li>Password: {people.password}</li>
-          </ul>
-        );
-      })}
+            return (
+            <ul key={people.name}>
+                <li>Name: {people.name}</li>
+                <li>Email: {people.email}</li>
+                <li>Password: {people.password}</li>
+            </ul>
+            );
+        })}
     </div>
   );
 };
